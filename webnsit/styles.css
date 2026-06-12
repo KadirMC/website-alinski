@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+  overflow-x: hidden;
+}
+
+/* APP */
+.app {
+  max-width: 520px;
+  margin: auto;
+  min-height: 100vh;
+  padding-bottom: 90px;
+}
+
+/* HEADINGS */
+h1 {
+  font-family: 'Playfair Display';
+  text-align: center;
+  color: #d6336c;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  margin: 15px;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.big { font-size: 18px; font-weight: bold; }
+.small { opacity: 0.7; }
+
+/* NAV */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+}
+
+nav button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #d6336c;
+}
+
+/* PAGES */
+.page { display: none; }
+.active { display: block; }
+
+/* ================= BOOK ================= */
+.book {
+  perspective: 2000px;
+  margin: 20px auto;
+  width: 340px;
+  height: 420px;
+  position: relative;
+}
+
+.pageBook {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fffdf8;
+  border-radius: 15px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+  transform-origin: left;
+  transition: transform 0.8s ease, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pageBook img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.pageBook .text {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.activePage {
+  opacity: 1;
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+
+/* Buttons */
+.bookControls {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookControls button {
+  background: #ff6f91;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+/* HEART CANVAS */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
